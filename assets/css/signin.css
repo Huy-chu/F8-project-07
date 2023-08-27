@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    background-image: url(../img/bank-background-05.jpg);
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root {
+    --primary-color: #7264d6;
+}
+
+/* -------------- Common -------------- */
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* -------------- Header -------------- */
+
+.header__inner {
+    position: absolute;
+    top: 50px;
+    left: 7%;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.header__logo-brand {
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.form__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------- Form Sign in -------------- */
+
+.box {
+    position: relative;
+    margin: 0 auto;
+    width: 380px;
+    height: 500px;
+    padding: 50px 40px;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity/see-through */
+    border-radius: 20px;
+}
+
+.form {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__heading {
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: transparent;
+    background-color: #4158d0;
+    background-image: linear-gradient(
+        43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.form__title {
+    margin-top: 20px;
+    color: #ccc;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    color: var(--primary-color);
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+    height: 44px;
+}
+
+.links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover,
+.links a:nth-child(2) {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.btn {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: 0.5s ease;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    transition: 0.4s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+
+.form__note {
+    display: block;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
