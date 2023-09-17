@@ -32,12 +32,6 @@ button {
     font-family: inherit;
 }
 
-.container {
-    width: 1170px;
-    max-width: calc(100% - 48px);
-    margin: 0 auto;
-}
-
 .btn {
     position: relative;
     display: inline-flex;
@@ -214,6 +208,10 @@ button {
 
 /* Navbar */
 
+.header__navbar {
+    display: block;
+}
+
 .nav__list {
     display: flex;
     align-items: center;
@@ -264,9 +262,6 @@ button {
     background-color: var(--primary-color);
 }
 
-.header-action__btn {
-}
-
 /* ------------------ Hero------------------ */
 
 .hero {
@@ -286,7 +281,7 @@ button {
     font-size: 5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.2; /* 116.667% */
+    line-height: 1.5; /* 116.667% */
 }
 
 .hero__heading {
@@ -703,7 +698,7 @@ button {
 /* ------ Info ------ */
 
 .net__heading {
-    margin: 12px 0 20px;
+    margin: 20px 0 20px;
 }
 
 .net__list {
@@ -851,7 +846,7 @@ button {
     column-gap: 14px;
     padding: 23px 13px;
     top: -50px;
-    right: -80px;
+    right: 0;
     width: 276px;
     height: 86px;
     border-radius: 12px;
@@ -900,7 +895,7 @@ button {
 
 .utilities__decor-2 {
     position: absolute;
-    right: -100px;
+    right: 10px;
     bottom: -80px;
     width: 160px;
     height: 110px;
@@ -961,10 +956,8 @@ button {
 }
 
 .updates__list {
+    width: 100%;
     margin-top: 70px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
     row-gap: 40px;
 }
 
@@ -972,8 +965,6 @@ button {
     display: flex;
     column-gap: 22px;
     padding: 28px;
-    width: 570px;
-    height: 216px;
     border-radius: 12px;
     background: #fff;
     transition: 0.25s;
@@ -1084,11 +1075,6 @@ button {
     background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
 }
 
-.footer__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr;
-}
-
 .footer__logo {
     display: flex;
     justify-content: flex-start;
@@ -1098,6 +1084,10 @@ button {
     font-weight: 700;
     column-gap: 4px;
     margin-bottom: 24px;
+}
+
+.footer__logo-brand {
+    width: 300px;
 }
 
 .footer__logo-icon {
@@ -1129,6 +1119,8 @@ button {
     display: inline-block;
     margin-right: 14px;
 }
+
+/* Footer Input */
 
 .input-container {
     margin-top: 30px;

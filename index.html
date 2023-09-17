@@ -98,14 +98,35 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
 
+        <!-- Grid CSS -->
+        <link rel="stylesheet" href="./assets/css/grid.css" />
+
         <!-- Style CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- RESPONSIVE  -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- ------------------------------ Header ------------------------------- -->
+        <!-- ------------------------------ PC Header ------------------------------- -->
         <header class="header">
-            <div class="container">
+            <div class="container container-fluid">
                 <div class="header__inner">
+                    <!-- Tablet/Mobile menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            class="toggle-menu-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Header Logo -->
                     <a href="#">
                         <div class="header__logo">
@@ -143,7 +164,8 @@
                     </a>
 
                     <!-- Header navbar -->
-                    <nav class="navbar">
+                    <nav class="header__navbar">
+                        s
                         <ul class="nav__list">
                             <li class="nav__item">
                                 <a href="#!" class="nav__link nav-active__link">
@@ -181,9 +203,67 @@
                 </div>
             </div>
         </header>
+
+        <!-- ------------------------- TABLET & Mobile Header---------------------------- -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"> </label>
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <div class="header__logo">
+                        <svg
+                            class="header__logo-icon"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M23.2969 19.0313H0.703125C0.314812 19.0313 0 19.346 0 19.7344C0 20.8994 0.944391 21.8438 2.10938 21.8438H21.8906C23.0556 21.8438 24 20.8994 24 19.7344C24 19.346 23.6852 19.0313 23.2969 19.0313Z"
+                                fill="#7264D6"
+                            />
+                            <path
+                                d="M17.625 5.67194V5.32038C17.625 5.05394 17.4746 4.81089 17.2364 4.69141L12.3145 2.23047C12.1167 2.13161 11.8833 2.13161 11.6855 2.23047L6.76364 4.69141C6.52538 4.81089 6.375 5.05394 6.375 5.32038V5.67194C6.375 6.06058 6.68948 6.37506 7.07812 6.37506H16.9219C17.3105 6.37506 17.625 6.06058 17.625 5.67194Z"
+                                fill="#7264D6"
+                            />
+                            <path
+                                d="M8.48438 7.78125H11.2969V13.4062H8.48438V7.78125Z"
+                                fill="#7264D6"
+                            />
+                            <path
+                                d="M12.7031 7.78125H15.5156V13.4062H12.7031V7.78125Z"
+                                fill="#7264D6"
+                            />
+                            <path
+                                d="M5.01759 4.96875H2.10938C1.72073 4.96875 1.40625 5.28323 1.40625 5.67188V17.625H22.5938V5.67188C22.5938 5.28323 22.2793 4.96875 21.8906 4.96875H18.9824C19.002 5.08523 19.0312 5.19919 19.0312 5.32031V5.67188C19.0312 6.83503 18.085 7.78125 16.9219 7.78125V13.4062H17.625C18.0136 13.4062 18.3281 13.7207 18.3281 14.1094C18.3281 14.498 18.0136 14.8125 17.625 14.8125H6.375C5.98636 14.8125 5.67188 14.498 5.67188 14.1094C5.67188 13.7207 5.98636 13.4062 6.375 13.4062H7.07812V7.78125C5.91497 7.78125 4.96875 6.83503 4.96875 5.67188V5.32031C4.96875 5.19919 4.99795 5.08523 5.01759 4.96875Z"
+                                fill="#7264D6"
+                            />
+                        </svg>
+                        <span class="header__logo-mobile">HCB BANK</span>
+                    </div>
+                </a>
+                <!-- Navigation -->
+                <ul>
+                    <li><a href="#features">Trang chủ</a></li>
+                    <li><a href="#services">Nhà đầu tư</a></li>
+                    <li><a href="#resources">Mạng lưới</a></li>
+                    <li><a href="#contact">Tuyển dụng</a></li>
+                </ul>
+            </div>
+        </header>
         <!-- ------------------------------- Hero -------------------------------- -->
         <div class="hero">
-            <div class="container">
+            <div class="container container-fluid">
                 <div class="hero__inner">
                     <!-- ---- Hero info---- -->
                     <section class="hero__info">
@@ -514,9 +594,9 @@
                                                 <h3 class="phone-item__heading">
                                                     Hóa đơn
                                                 </h3>
-                                                <span class="phone-item__price"
-                                                    >-$400</span
-                                                >
+                                                <span class="phone-item__price">
+                                                    -$400
+                                                </span>
                                             </div>
                                             <div class="phone-item__bottom">
                                                 <h3 class="phone-item__title">
@@ -584,7 +664,7 @@
         <main>
             <!-- ------------------------------- Net -------------------------------- -->
             <section class="net" id="net">
-                <div class="container">
+                <div class="container container-fluid">
                     <div class="net__inner">
                         <!-- -------------- Media ---------------- -->
                         <div class="net__media">
@@ -720,7 +800,7 @@
 
                         <!-- -------------- Info ---------------- -->
                         <section class="net__info">
-                            <span class="section-title">
+                            <span class="section-title net__title">
                                 Ví thông minh kỹ thuật số
                             </span>
                             <h2
@@ -728,7 +808,7 @@
                             >
                                 Chuyển và gửi tiền của bạn vào bất cứ lúc nào
                             </h2>
-                            <p class="section-desc">
+                            <p class="section-desc net__desc">
                                 Chúng tôi tập hợp mọi thứ cần thiết để xây dựng
                                 trang web và ứng dụng chấp nhận thanh toán và
                                 gửi khoản thanh toán trên toàn cầu. Chúng tôi là
@@ -766,11 +846,11 @@
             </section>
             <!-- ------------------------------- Utilities -------------------------------- -->
             <section class="utilities">
-                <div class="container">
+                <div class="container container-fluid">
                     <section class="utilities__inner">
                         <!-- ----- Info ----- -->
                         <div class="utilities__info">
-                            <span class="section-title"
+                            <span class="section-title utilities__title"
                                 >Ví thông minh kỹ thuật số</span
                             >
                             <h2
@@ -1015,9 +1095,11 @@
             <section class="updates">
                 <div class="container">
                     <div class="updates__inner">
-                        <span class="section-title">Blog của chúng tôi</span>
                         <section class="updates__row">
                             <div class="updates__info">
+                                <span class="section-title"
+                                    >Blog của chúng tôi</span
+                                >
                                 <h2
                                     class="section-heading updates__heading wow animate__pulse"
                                 >
@@ -1036,9 +1118,9 @@
                         </section>
 
                         <!-- -------------- Up dates List---------------- -->
-                        <ul class="updates__list">
+                        <ul class="updates__list row row-cols-xl-2 row-clos-1">
                             <!-- item 1 -->
-                            <li class="updates-item">
+                            <li class="updates-item col-12 col-xl-5">
                                 <img
                                     src="./assets/img/updates-img-01.png"
                                     alt=""
@@ -1059,7 +1141,9 @@
                             </li>
 
                             <!-- item 2 -->
-                            <li class="updates-item">
+                            <li
+                                class="updates-item col-12 col-xl-5 offset-xl-1"
+                            >
                                 <img
                                     src="./assets/img/updates-img-02.png"
                                     alt=""
@@ -1079,7 +1163,7 @@
                             </li>
 
                             <!-- item 3 -->
-                            <li class="updates-item">
+                            <li class="updates-item col-12 col-xl-5">
                                 <img
                                     src="./assets/img/updates-img-03.png"
                                     alt=""
@@ -1100,7 +1184,9 @@
                             </li>
 
                             <!-- item 4 -->
-                            <li class="updates-item">
+                            <li
+                                class="updates-item col-12 col-xl-5 offset-xl-1"
+                            >
                                 <img
                                     src="./assets/img/updates-img-04.png"
                                     alt=""
@@ -1123,7 +1209,7 @@
                     </div>
                 </div>
             </section>
-            <!-- ------------------------------- Dowload -------------------------------- -->
+            <!-- ------------------------------- Download -------------------------------- -->
             <section class="download">
                 <div class="container">
                     <div class="download__inner">
@@ -1371,9 +1457,11 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
-                    <div class="footer__list">
+                    <div
+                        class="footer__list row row-cols-1 row-cols-lg-2 row-cols-xl-4"
+                    >
                         <!-- item 1 -->
-                        <ul class="footer-item">
+                        <ul class="footer-item col-lg-12 col-xl-2 col-12">
                             <!-- Header Logo -->
                             <a href="#">
                                 <div class="footer__logo">
@@ -1420,7 +1508,7 @@
                         </ul>
 
                         <!-- item 2 -->
-                        <ul class="footer-item">
+                        <ul class="footer-item col-lg-4 col-xl-2 col-12">
                             <h3 class="footer-item__heading">
                                 Sơ đồ trang Web
                             </h3>
@@ -1439,8 +1527,8 @@
                         </ul>
 
                         <!-- item 3 -->
-                        <!-- item 2 -->
-                        <ul class="footer-item">
+
+                        <ul class="footer-item col-lg-4 col-xl-2 col-12">
                             <h3 class="footer-item__heading">Mạng xã hội</h3>
                             <li class="footer-tag">
                                 <a href="#!"
@@ -1537,7 +1625,7 @@
                         </ul>
 
                         <!-- item 4 -->
-                        <ul class="footer-item">
+                        <ul class="footer-item col-lg-4 col-xl-6 col-sm-12">
                             <h3 class="footer-item__heading">Trụ sở chính</h3>
                             <li class="footer-tag">
                                 <a href="#!">
